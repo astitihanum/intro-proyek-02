@@ -1,4 +1,5 @@
 <?php
+
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
@@ -6,13 +7,12 @@
     
         public function index()
         {
-            $data['title'] = "Home";
-            $data['content'] = $this->load->view('Users/Home');
-            $this->load->view('template', $data);
+            //home logic here
         }
     
     }
     
     /* End of file Home.php */
     
+
 ?>
