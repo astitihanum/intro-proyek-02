@@ -8,11 +8,15 @@
         {
             $data['title'] = "Home";
             $data['content'] = $this->load->view('Users/Home');
+            $data['cssfile'] = "assets/css/home.css";
             $this->load->view('template', $data);
         }
         public function login()
         {
-            //Login logic here
+            $data['title'] = "Login";
+            $data['content'] = $this->load->view('Users/Login');
+            $data['cssfile'] = "assets/css/login.css";
+            $this->load->view('template', $data);
         }
         public function register()
         {

@@ -12,6 +12,10 @@ a {
 	border-radius: 0px 0px 100px 100px;
 }
 
+.wrapper-flex {
+	display: flex;
+}
+
 .title-wrapper {
 	width: 50%;
 	display: flex;
@@ -24,10 +28,6 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.wrapper-ti .title-wrapper .btn-action-wrapper {
-	display: flex;
 }
 
 .btn-primary {
@@ -43,6 +43,16 @@ a {
 }
 
 .title-wrapper .btn {
-	width: 20%;
 	margin: 10 0 0 10;
+}
+
+.assets-wrapper {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+.landingimg {
+	width: 80%;
 }
