@@ -1,19 +1,24 @@
-<div class="wrapper">
-    <div class="title-wrapper">
-        <div clas="wrapper-title-web">
-            <h1>Exoindo</h1>
-            <h3>Cleaning Service</h3>
+<div class="container-fluid">
+    <div class="row h-100">
+        <div class="bg-blueme w-100 h-75">
+            <div class="row h-100">
+                <div class="col d-flex justify-content-center align-items-center flex-column">
+                    <div class="text-center">
+                        <img class="w-50" src="<?= base_url()?>assets/images/title-home.png">
+                    </div>
+                    <div class="btn-wrap m-3">
+                        <form action="<?= site_url("users/handelHomebtn"); ?>" method="post">
+                            <button type="submit" name="request" value="register" class="btn rounded-pill btn-primary m-2 px-5">Register</button>
+                            <button type="submit" name="request" value="login" class="btn rounded-pill btn-secondary m-2 px-5">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center flex-column">
+                    <div class="text-center">
+                        <img class="w-75" src="<?= base_url()?>assets/images/socializing.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="btn-action-wrapper">
-            <a href="<?= base_url() ?>login">
-                <button type="button" class="btn btn-primary">Login</button>
-            </a>
-            <a href="<?= base_url()?>register">
-                <button type="button" class="btn btn-secondary">Register</button>
-            </a>
-        </div>
-    </div>
-    <div class="assets-wrapper">
-        <img class="landingimg" src="<?= base_url() ?>assets/images/socializing.png" alt="" srcset="">
     </div>
 </div>

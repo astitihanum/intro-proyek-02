@@ -11,6 +11,14 @@
             $data['cssfile'] = "assets/css/home.css";
             $this->load->view('template', $data);
         }
+        public function handelHomebtn()
+        {
+            if($_POST["request"] === 'login'){
+                redirect('login');
+            } else if($_POST["request"] === 'register'){
+                redirect('register');
+            }  
+        }
         public function login()
         {
             $data['title'] = "Login";
