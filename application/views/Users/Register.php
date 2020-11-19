@@ -3,25 +3,29 @@
     <div class="col-4 blue-background">
         <div class="row h-25 d-flex justify-content-center align-items-end">
             <div class="mx-5">
-                <h2>Login</h2>
-                <t class="mt-2">Jika sudah terdaftar, Gunakan akun yang sudah terdaftar untuk login</t>
+                <h2>Register</h2>
+                <t class="mt-2">Daftar dengan memasukkan data diri anda</t>
             </div>
         </div>
         <div class="row h-75 d-flex justify-content-center align-items-center flex-column">
             <div class="w-75">
                 <form action="" method="post">
                     <div class="p-2 bg-white">
-                        <div class="form-group d-flex p-3 flex-column">
+                        <div class="form-group d-flex p-2    flex-column">
                             <label for="no-telp-input">No Telephone</label>
                             <input type="text" placeholder="08xxxxxxxxxx" id="notelpinput">
                         </div>
-                        <div class="form-group d-flex p-3 flex-column">
+                        <div class="form-group d-flex p-2 flex-column">
                             <label for="password">Password</label>
                             <input type="password" placeholder="password" id="passwordinput">
                         </div>
+                        <div class="form-group d-flex p-2 flex-column">
+                            <label for="confirm-password">Password</label>
+                            <input type="password" placeholder="confirm password" id="confirmpasswordinput">
+                        </div>
                     </div>
                     <div class="m-5">
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Register</button>
                     </div>
                 </form>
             </div>

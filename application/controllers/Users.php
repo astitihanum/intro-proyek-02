@@ -20,7 +20,10 @@
         }
         public function register()
         {
-            // register logic here
+            $data['title'] = "Login";
+            $data['content'] = $this->load->view('Users/Register');
+            $data['cssfile'] = "assets/css/login.css";
+            $this->load->view('template', $data);
         }
     
     }
