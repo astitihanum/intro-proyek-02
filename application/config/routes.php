@@ -59,4 +59,4 @@ $route['login'] = 'Users/login';
 $route['register'] = 'Users/register';
 
 //Home route
-$route['home'] = 'Home'
+$route['home'] = 'Home';
