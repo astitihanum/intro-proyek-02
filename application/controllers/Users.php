@@ -11,13 +11,13 @@
             $data['cssfile'] = "assets/css/home.css";
             $this->load->view('template', $data);
         }
-        public function handelHomebtn()
+        public function handleHomebtn()
         {
             if($_POST["request"] === 'login'){
                 redirect('login');
             } else if($_POST["request"] === 'register'){
                 redirect('register');
-            }  
+            }     
         }
         public function login()
         {
@@ -25,6 +25,10 @@
             $data['content'] = $this->load->view('Users/Login');
             $data['cssfile'] = "assets/css/login.css";
             $this->load->view('template', $data);
+        }
+        public function execlogin()
+        {
+            # code...
         }
         public function register()
         {

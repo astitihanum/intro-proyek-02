@@ -11,6 +11,7 @@
 
         <!-- custom css -->
         <link rel="stylesheet" href="<?= base_url() ?>assets/css/main.css">
+        <link rel="stylesheet" href="<?= base_url() ?>assets/css/font-responsive.css">
         <link rel="stylesheet" href="<?= base_url() ?><?= $cssfile ?>">
 
     </head>
