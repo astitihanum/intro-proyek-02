@@ -6,10 +6,7 @@
     
         public function index()
         {
-            $data['title'] = "Home";
-            $data['content'] = $this->load->view('Users/Home');
-            $data['cssfile'] = "assets/css/home.css";
-            $this->load->view('template', $data);
+            view('Users.index');
         }
         public function handleHomebtn()
         {
