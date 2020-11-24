@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+use Illuminate\Database\Capsule\Manager;
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -75,10 +79,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => $_ENV['HOSTNAME'] | '',
+	'username' => $_ENV['USERNAME'] | '',
+	'password' => $_ENV['PASSWORD'] | '',
+	'database' => $_ENV['DATABASE'] | '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +98,19 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+$manager = new Manager;
+$manager->addConnection([
+    'driver'    => 'mysql',
+    'host'      => $_ENV['HOSTNAME'],
+    'database'  => $_ENV['DATABASE'],
+    'username'  => $_ENV['USERNAME'],
+    'password'  => $_ENV['PASSWORD'],
+    'charset'   => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
+    'prefix'    => '',
+]);
+$manager->setEventDispatcher(new Dispatcher(new Container));
+$manager->setAsGlobal();
+$manager->bootEloquent();
